@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "github.com/Bastihan-ChirinoF/Helper";
+
+package Server_helper;
+
+service Report_Inscribed{
+    rpc Inscribe (Betas) returns (to_Inscribe) {} 
+}
+
+
+message Betas {
+    int64 ammount = 1;
+}
+
+message to_Inscribe {
+    int64 inscribed = 1;
+    string server = 2;
+}
